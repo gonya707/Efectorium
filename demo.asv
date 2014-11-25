@@ -1,13 +1,18 @@
-%WIP. not available yet
-
 clc;
 clear;
 close all;
 
-[x fs] = wavread('sounds/chord.wav');
+[x fs] = wavread('chord.wav');
 x = normal(x);
 left_margin = 12000;
 right_margin = 12750;
+
+% waveshaping
+x_dist_ws = x;
+x_dist_ws (x_dist_ws > 0.5) = -x_dist_ws(x_dist_ws > 0.5);
+x_dist_ws (x_dist_ws < 0.1) = -x_dist_ws(x_dist_ws < 0.1);
+x_dist_ws = x_dist_ws - mean (x_dist_ws);
+x_dist_ws = normal(x_dist_ws);
 
 figure;
 subplot(4, 2, 1);
