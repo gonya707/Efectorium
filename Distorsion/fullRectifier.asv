@@ -1,8 +1,7 @@
-function r = expDist(x, threshold)
-% function r = expDist(x, threshold)
+function r = fullRectifier(x)
+% function r = saturationDist(x, threshold)
 %
-% Applies exponential distortion to the input signal, similar to the V-I
-% relationship in a transistor ampl
+% Applies saturation distortion to the input signal.
 %
 % Input parameters:
 %   x -> original, un-distorted signal.
@@ -13,10 +12,10 @@ function r = expDist(x, threshold)
 % Output parameters: 
 %   r -> result. Distorted signal.
 
-    x = exp(x);
-    x = x / max(abs(x));
-    x = x - mean (x);
-    r = normal(x_dist_exp);
+x = abs(x);
+x = x - mean (x);
+r = normal(x);
+
 
 
 end
