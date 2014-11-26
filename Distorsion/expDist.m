@@ -1,8 +1,16 @@
-function r = expDist(x, threshold)
+function r = expDist(x)
+% function r = expDist(x)
+%
+% Applies exponential distortion to the input signal, similar to the V-I
+% relationship in a transistor operation.
+%
+% Input parameters:
+%   x -> original, un-distorted signal.
+%
+% Output parameters: 
+%   r -> result. Distorted signal.
+
     x = exp(x);
-    x = x / max(abs(x));
     x = x - mean (x);
-    r = normal(x_dist_exp);
-
-
+    r = x;
 end
