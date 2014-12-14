@@ -12,6 +12,10 @@ function r = saturationDist(x, threshold)
 % Output parameters: 
 %   r -> result. Distorted signal.
 
+    if(1 ~= numel(threshold))
+       error('threshold (2nd input parameter) must be a single number.');
+    end
+
     x(x > threshold) = threshold;
     x(x < -threshold) = -threshold;
     r = x;

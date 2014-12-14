@@ -26,7 +26,7 @@ function r = waveShape(x, ranges, factor)
 	
 	r = x;
 	
-	for (i = 1 : Ns)
+	for i = 1 : Ns
 		r( (r > ranges(i,1)) & (r < ranges(i,2)) ) = factor(i) * r(r > ranges(i,1) & r < ranges(i,2)); 
 	end
 

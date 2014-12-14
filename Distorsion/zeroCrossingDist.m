@@ -13,7 +13,7 @@ function r = zeroCrossingDist(x, threshold)
 %   r -> result. Distorted signal.
 
     if(1 ~= numel(threshold))
-       error('threshold (2nd input parameter) must be a single number.';
+       error('threshold (2nd input parameter) must be a single number.');
     end
 
     x(abs(x) < threshold) = 0;

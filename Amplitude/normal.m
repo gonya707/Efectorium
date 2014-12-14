@@ -8,8 +8,6 @@ function r = normal(x)
 %
 % Output parameters: 
 %   r -> result. Normalized signal.
-%
-% TODO: matrix compatibility
 
-    r = x / max(abs(x));
+    r = x ./ max(abs(x));
 end
