@@ -9,7 +9,7 @@ function r = centerBias(x)
 % Output parameters
 %   r -> result.
 
-    r = x = mean(x);
+    r = x - mean(x);
 
 
 end
