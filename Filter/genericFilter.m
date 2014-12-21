@@ -8,7 +8,10 @@ function r = genericFilter(x, fs, f, n, mode)
 %       fs -> Sampling frequency
 %       f -> filter's cuttoff frequency
 %       n -> filter's order
-%       mode -> Filter's mode. Possible values are 'LowPass' or 'HighPass'
+%       mode -> Filter's mode. Possible values are 'LowPass' or 'HighPass'.
+%			Output parameters:
+%					r -> Result. Filtered signal.
+%
 
     if(fs <= 0)
         error('Signal sampling frequency (2nd parameter) must be a positive number.');
