@@ -9,7 +9,7 @@ function r = addNoise(x, w)
 % Output parameters
 %   r -> result.
 
-L = length(x);
-r = x + wgn(1, L, w);
+	L = length(x);
+	r = x + wgn(1, L, w);
 
 end
