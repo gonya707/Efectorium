@@ -1,0 +1,16 @@
+function r = ampdB(x, dB)
+% function r = ampdB(x, dB)
+%
+% Amplifies the input signal.
+%
+% Input parameters:
+%   x -> original signal.
+%   dB ->
+%
+% Output parameters: 
+%   r -> result. Distorted signal.
+
+
+
+
+end
