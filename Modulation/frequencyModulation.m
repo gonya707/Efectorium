@@ -14,9 +14,35 @@ function r = frequencyModulation(x, fc, carrier)
 				error('Carrier frequency (2nd parameter) must be a single number.');
 		end
 
-		if(carrier ~= 'sine' && carrier ~= 'saw' && carrier ~= 'square' && carrier ~= 'triangle' && carrier ~= 'ramp')
-				error('Carrier (3rd parameter) must be a string containing one of the supported waveforms: sine, square, saw, ramp or triangle.');
+		L = length(x);
+
+		if (ischar(carrier) )
+				if(carrier ~= 'sine' && carrier ~= 'saw' && carrier ~= 'square' && carrier ~= 'triangle' && carrier ~= 'ramp')
+						error('Carrier (3rd parameter) must be a string containing one of the supported waveforms: sine, square, saw, ramp or triangle.');
+				else
+						switch (carrier)
+								case 'sine'
+																
+								case 'square'
+								
+								case 'saw'
+								
+								case 'ramp'
+								
+								case 'triangle'
+						
+						
+						
+						
+						end
+				end
+		
+		else
+				%arbitrary waveform
+		
 		end
+
 		
 		
+end
 end
